@@ -118,6 +118,8 @@ let fizzDivisor = Math.round(Math.random() * (10 - 1) + 1);
 let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1);
 let j = Math.round(Math.random() * (1000 - 1) + 1);
 let start = Math.round(Math.random() * (10 - 1) + 1);
+
+console.log(`The Starting Number is: ${start}`);
 for(let i = start; i <= j; i++)
 {
     if(i % fizzDivisor == 0)

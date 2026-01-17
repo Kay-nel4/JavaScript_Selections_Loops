@@ -15,18 +15,15 @@ for(let i = 0; i < 100; i++)
 console.log("EXERCISE 2:\n==========\n");
 
 console.log("FIZZBUZZ Challenge")
-for(let i = 1; i <= 100; i++)
-{
-    if(i % 3 == 0 && i % 5 ==0)
-    {
+for(let i = 1; i <= 100; i++){
+
+    if(i % 3 == 0 && i % 5 ==0){
         console.log(`FIZZBUZZ ${i}`);
     }
-    else if(i % 5 == 0)
-    {
+    else if(i % 5 == 0){
         console.log(`BUZZ ${i}`);
     }
-    else if(i % 3 == 0)
-    {
+    else if(i % 3 == 0){
         console.log(`FIZZ ${i}`);
     }
 
@@ -77,12 +74,10 @@ console.log("----Do/While LOOP----")
 
 let startNum = 1;
 do{
-    if(startNum % 3 == 0 && startNum % 5 == 0)
-    {
+    if(startNum % 3 == 0 && startNum % 5 == 0){
         console.log(`FIZZBUZZ ${startNum}`);
     }
-    else if(startNum % 5 == 0)
-    {
+    else if(startNum % 5 == 0){
         console.log(`BUZZ ${startNum}`);
     }
     else(startNum % 3 ==0)
@@ -99,17 +94,18 @@ console.log("-----------")
 let value = Math.round((Math.random() * 500));
 
 let n = Math.round(Math.random() * (500 - 100) + 100);
-for(let i = 0; i = n; i++){
-    if(i == n)
-    {
-        console.log(`Found Value ${i}`);
+let found = false;
+for(let i = 0; i <= n; i++){
+    if(i == value){
+        console.log(`Value found... It was ${value}`)
+        found = true;
         break;
-       
     }
-
-    console.log("Value Not Found.")
-
 }
+if(!found){
+    console.log(`${value} Not Found`);
+}
+
 
 console.log("Exercise 5 ----Customized FIZZBUZZ----");
 console.log("----------");
@@ -118,21 +114,21 @@ let fizzDivisor = Math.round(Math.random() * (10 - 1) + 1);
 let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1);
 let j = Math.round(Math.random() * (1000 - 1) + 1);
 let start = Math.round(Math.random() * (10 - 1) + 1);
+console.log(`Numbers Divisible by ${fizzDivisor} = FIZZ`);
+console.log(`Numbers Divisible by ${buzzDivisor} = BUZZ`);
 
 console.log(`The Starting Number is: ${start}`);
-for(let i = start; i <= j; i++)
-{
-    if(i % fizzDivisor == 0)
-    {
+for(let i = start; i <= j; i++){
+    if(i % fizzDivisor == 0){
         console.log(`FIZZ ${i}`);
     }
-    else if(i % buzzDivisor == 0)
-    {
+    else if(i % buzzDivisor == 0){
         console.log(`BUZZ ${i}`);
     }
-    
-    console.log(`Sorry no FIZZ or BUZZ here! ${i}`);
-    
+    else{
+       console.log(`Sorry no FIZZ or BUZZ here! ${i}`); 
+    }
+        
 }
 
 
